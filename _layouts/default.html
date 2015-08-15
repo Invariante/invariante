@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
 
-  {% include head.html %}
+    <link href="/public/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://gmpg.org/xfn/11" rel="profile">
 
+    <title>
+      {% if page.title %}{{ page.title }} &middot; {% endif %}
+      Bruno Koga
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/hyde.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700|Abril+Fatface">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/public/favicon.png">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+    <!-- Google Analytics -->
+    {% include google_analytics.html %}
+  </head>
   <body>
-
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>Bruno Koga</h1>  
+        <p class="lead">Engenheiro de Software na <a href="http://www.99taxis.com">99Taxis</a> e embaixador de <a href="http://brasil.appsterdam.rs">Appsterdam no Brasil</a>. Escrevo coisas úteis e inúteis também.
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="http://brunokoga.com/cv">Resumé (CV)</a>
+            </li>
+            <li>
+              <a href="https://github.com/brunokoga">My Github Profile (@brunokoga)</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/brunokoga">Twitter (@brunokoga)</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/users/912254/bruno-koga">Stack Overflow</a>
+            </li>
+          </ul>
+          <p>&copy; 2015. All rights reserved.</p>
         </div>
-      </div>
 
-      <div class="container content">
-        {{ content }}
       </div>
+    </header>
+
+    <div class="content container">
+      {{ content }}
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+<script type="text/javascript" src="/_js/retina.js"></script>
   </body>
 </html>
