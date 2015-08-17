@@ -7,11 +7,11 @@ permalink:        pretty
 
 # Setup
 title:            Invariante
-tagline:          'tagline aqui'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
+tagline:          'Algumas coisas nunca mudam'
+description:      'Escrito por <a href="https://twitter.com/brunokoga">Bruno</a> e <a href="https://twitter.com/diogot">Diogo</a>.' 
+url:              http://invariante.com
 
 paginate:         5
 
 github:
-  repo:           https://github.com/poole/lanyon
+  repo:           https://github.com/appsterdambr/invariante
