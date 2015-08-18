@@ -11,6 +11,9 @@ tagline:          'Algumas coisas nunca mudam'
 description:      'Escrito por <a href="https://twitter.com/brunokoga">Bruno</a> e <a href="https://twitter.com/diogot">Diogo</a>.' 
 url:              http://invariante.com
 baseurl:          http://invariante.com
+author:
+  name: Bruno Koga e Diogo Tridapalli
+  email: feed@invariante.com
 
 paginate:         5
 
