@@ -10,7 +10,7 @@ title:            Invariante
 tagline:          'Algumas coisas nunca mudam'
 description:      'Escrito por <a href="https://twitter.com/brunokoga">Bruno</a> e <a href="https://twitter.com/diogot">Diogo</a>.' 
 url:              http://invariante.com
-baseurl:          http://brasil.appsterdam.rs/invariante
+baseurl:          http://invariante.com
 
 paginate:         5
 
