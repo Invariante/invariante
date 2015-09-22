@@ -3,8 +3,9 @@ layout: post
 title: UIScrollView ao resgate, não tão rápido...
 ---
 
-Bem vindo ao Invariante, este é o nosso primeiro *post*, a idéia do blog é postar no mínimo dois artigos por mês, se quiser saber mais sobre a gente vá em [Sobre](/sobre).
+Bem vindo ao Invariante, este é o nosso primeiro *post*. A idéia do blog é postar no mínimo dois artigos por mês, se quiser saber mais sobre a gente vá em [Sobre](/sobre).
 
+---
 A cada ano aumenta a variedade de dispositivos iOS com tamanhos de telas diferentes e assim o *Auto Layout* se torna cada vez mais importante no desenvolvimento. Já usei muito *autoresizingMask* e calculei muito *frame* na mão, mas tenho apreciado cada vez mais o *Auto Layout* e tenho feito dele minha principal ferramenta de *layout*.
 Entretanto essa semana me deparei com um problema imune ao *Auto Layout*, talvez devido minha falta de habilidade ¯\\\_(ツ)_/¯. 
 
@@ -146,7 +147,7 @@ aplica uma `CGAffineTransform` do tipo `CGAffineTransformMakeScale(zoomScale, zo
 }
 {% endhighlight %}
 
-A `UIScrollView` é uma classe muito importante no `UIKit`, seu funcionamento é muito simples, mas entender como ela exatamente funciona pode não ser uma tarefa muito simples, hehe.
+A `UIScrollView` é uma classe muito importante no `UIKit`, seu funcionamento é muito simples, mas entender como ela exatamente funciona pode não ser uma tarefa muito simples.
 
 Um exemplo dessa solução funcionando pode ser encontrada no repositório [UIScrollView-Center](https://github.com/diogot/UIScrollView-Center).
 Qualquer dúvida, críticas e comentários são bem vindos, a maneira mais fácil de me encontrar é no [Twitter](http://twitter.com/diogot).
