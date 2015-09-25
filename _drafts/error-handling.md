@@ -316,4 +316,4 @@ func processFile(filename: String) throws {
 
 ## Isso é importante mesmo?
 
-Apesar do Swift 2 ser recente,  já existem muitos artigos e exemplos sobre tratamentos de erros em Swift. Além disso, com a promessa do Swift ter seu código aberto até o fim do ano, entender todas as capacidades e o entender o funcionamento da linguagem e da sua biblioteca padrão podem ser importantes mesmo se você não desenvolve ou não tem planos para desenvolver especificamente para o ecossistema da Apple. E tratamento de erros está enraizado tanto na filosofia como nas boas práticas do Swift.
+Apesar do Swift 2 ser recente,  já existem muitos artigos e exemplos sobre tratamentos de erros em Swift. Além disso, com a promessa do Swift ter seu código aberto até o fim do ano, entender todas as capacidades da linguagem, o seu funcionamento e sua biblioteca padrão podem ser importantes mesmo se você não desenvolve ou não tem planos para desenvolver especificamente para o ecossistema da Apple. E tratamento de erros está enraizado tanto na filosofia como nas boas práticas do Swift.
