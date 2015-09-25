@@ -108,7 +108,7 @@ Para isso, vamos adicionar o *keyword* `throw` na nossa função. Como somos bon
 
 Nota: como utilizamos a sintaxe do Swift para documentação, é assim que vemos nossos comentários ao clicarmos com ⌥+click na chamada na nossa função:
 
-![Boa documentação <3](../public/imgs/error-handling-1.png)
+![Boa documentação <3](/public/imgs/error-handling-1.png)
 
 A declaração da nossa função agora diz que ela retorna um Array de Strings, mas, **ao invés disso** ela pode terminar a execução no meio e jogar um  erro.
 
@@ -198,7 +198,7 @@ if let urlPath = urlPath {
 
 O compilador nos dará o erro "Call can throw, but it is not marked with 'try' and the error is not handled".
 
-![Cadê o try?](../public/imgs/error-handling-2.png)
+![Cadê o try?](/public/imgs/error-handling-2.png)
 
 ## Faça, tente, capture.
 
