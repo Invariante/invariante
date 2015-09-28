@@ -27,7 +27,7 @@ Uma forma ingênua de resolver problema em Swift de maneira similar (e carregar 
 func dataWithContentsOfFile(path: String) -> (NSData?, NSError?) { ... }
 {% endhighlight %}
 
-Aqui, novamente, não existe relação entre os valores retornados na tupla. A, pior, como precisamos retornar optionals (afinal, os valores podem ser nulos), o código fica totalmente deselegante.
+Aqui, novamente, não existe relação entre os valores retornados na tupla. E, pior, como precisamos retornar optionals (afinal, os valores podem ser nulos), o código fica totalmente deselegante.
 
 
 ## E agora?
