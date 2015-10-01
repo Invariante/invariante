@@ -12,15 +12,15 @@ Entretanto essa semana me deparei com um problema imune ao *Auto Layout*, talvez
 A idéia é ter uma `View2` que pertence a um *view controller* 2 dentro de uma `View1` pertencente a um *view controller* 1. A `View2` pode ter um tamanho arbitrário definido pelo *view controller* 1.
 A `View2` irá conter uma imagem que deve ser centralizada, o tamanho dessa imagem é arbitrário e deve ser redimensionado de maneira que a distância do lado maior mais próximo da borda seja de `x` pontos.
 
-<img src="/public/imgs/uiscrollview-1.jpg" alt="UIScrollView1" style="width: 600px"/>
+<img src="/public/imgs/uiscrollview-1.jpg" alt="UIScrollView1" style="width: 100%; margin 0 auto 0 auto;"/>
 
 Até ai nada de complicado, mas também é necessário que seja possível fazer *zoom* e *scroll* da imagem e a margem de `x` pontos seja mantida independente da ampliação.
 
-<img src="/public/imgs/uiscrollview-2.jpg" alt="UIScrollView2" style="width: 600px"/>
+<img src="/public/imgs/uiscrollview-2.jpg" alt="UIScrollView2" style="width: 100%; margin 0 auto 0 auto;"/>
 
 Bom nossa boa e velha amiga `UIScrollView` parece ser uma ótima candidata para salvar o dia mas, para isso, precisamos entender melhor com ela funciona. Uma ótima referência é um artigo da edição sobre *views* do objc.io, [Understanding Scroll Views](https://www.objc.io/issues/3-views/scroll-view/). Vou resumir alguns conceitos básicos e colocar um pouco da minha visão mas o recomendo a leitura do artigo, assim como os outros artigos dessa edição sobre *views*. Para entender como uma *scroll view* funciona precisamos entender o que significam 3 propriedades: `contentOffset`, `contentSize` e `contentInset`.
 
-<img src="/public/imgs/uiscrollview-3.jpg" alt="UIScrollView3" style="width: 600px"/>
+<img src="/public/imgs/uiscrollview-3.jpg" alt="UIScrollView3" style="width: 100%; margin 0 auto 0 auto;"/>
 
 ##`contentOffset`
 
@@ -55,7 +55,7 @@ scrollView.contentInset = UIEdgeInsetsMake(yInset, xInset, yInset, xInset);
 
 Quando o `contentSize` for maior que que a *scroll view* o `contentInset` define os limites máximos de *scroll*. Por exemplo no caso da `UIImageView` que tem a `frame.origin = {0,0}`, os limites da `UIImageView` não podem "entrar" na área definida pelo `frame` da *scrool view* descontado o `contentInset`. A figura abaixo deve deixar isso mais claro.
 
-<img src="/public/imgs/uiscrollview-4.jpg" alt="UIScrollView4" style="width: 600px"/>
+<img src="/public/imgs/uiscrollview-4.jpg" alt="UIScrollView4" style="width: 100%; margin 0 auto 0 auto;"/>
 
 Ok, agora fica fácil escrever o código que adiciona uma imagem à uma *scroll view* e define essas propriedades corretamente:
 
