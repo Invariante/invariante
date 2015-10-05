@@ -202,7 +202,7 @@ O compilador nos dará o erro "Call can throw, but it is not marked with 'try' a
 
 ## Faça, tente, capture.
 
-Existem quatro formas de tratar erros em Swift. Você pode propagar o erro, tratar o erro com `do-catch`, tratar o erro como um valor opcional ou, caso você pode forçar a chamada sem tratar o erro (e, caso o erro ocorra, você terá um crash, similar a forçar um desempacotamento de opcional quando ele é `nil`).
+Existem quatro formas de manipular erros em Swift. Você pode propagar o erro, tratar o erro com `do-catch`, tratar o erro como um valor opcional ou você pode forçar a chamada sem tratar o erro (e caso o erro ocorra você terá um crash - similar a forçar um desempacotamento de opcional quando ele é `nil`).
 
 É importante lembrar que quando uma função lança um erro (lançar = *throw*), o fluxo do seu programa sofre uma alteração. É importante identificar e tratar corretamente os lugares onde erros podem ser lançados.
 
