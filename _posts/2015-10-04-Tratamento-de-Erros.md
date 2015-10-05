@@ -19,7 +19,7 @@ NSError *error;
 NSData *data = [NSData dataWithContentsOfFile:path options:NULL error: &error];
 {% endhighlight %}
 
-O problema aqui é que não temos informações clara sobre a relação entre o retorno `data` e o erro `error`. Se `data` for `nil` isso significa que `error` é não-`nil`? E se `data` for um objeto `NSData` válido, significa que `error` vai ser sempre `nil`? Existe algum caso em que ambos `data` e `error` são populados? Existe algum caso em que ambos `data` e `error` são `nil`?
+O problema aqui é que não temos informações claras sobre a relação entre o retorno `data` e o erro `error`. Se `data` for `nil` isso significa que `error` é não-`nil`? E se `data` for um objeto `NSData` válido, significa que `error` vai ser sempre `nil`? Existe algum caso em que ambos `data` e `error` são populados? Existe algum caso em que ambos `data` e `error` são `nil`?
 
 Uma forma ingênua de resolver problema em Swift de maneira similar (e carregar os mesmos efeitos colaterais da abordagem) seria termos funções que retornam uma tupla:
 
