@@ -86,7 +86,7 @@ Agora, vamos criar uma função no nosso `AddressBookPermission` onde recebemos 
 public func addContactsFromVcard(vCardData: CFData) -> [String] { ... }
 {% endhighlight %}
 
-Note que o retorno da nossa função **não** é um *optional*, ou seja, nós garantirmos que vamos retornar um Array de Strings (nem que ele seja vazio). Mas nossa função pode não conseguir completar a sua tarefa e se deparar com algum erro no seu caminho. Além disso, queremos determinar de forma clara a diferença entre retornar um Array vazio (ou seja, não havia nenhum contato no vCard) ou "retornar" um erro (ou seja, alguma coisa realmente deu errado).
+Note que o retorno da nossa função **não** é um *optional*, ou seja, nós garantimos que vamos retornar um Array de Strings (nem que ele seja vazio). Mas nossa função pode não conseguir completar a sua tarefa e se deparar com algum erro no seu caminho. Além disso, queremos determinar de forma clara a diferença entre retornar um Array vazio (ou seja, não havia nenhum contato no vCard) ou "retornar" um erro (ou seja, alguma coisa realmente deu errado).
 
 Para isso, vamos adicionar o *keyword* `throws` na nossa função. Como somos bons cidadãos, também vamos documentar (uso o [VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode) para isso):
 
