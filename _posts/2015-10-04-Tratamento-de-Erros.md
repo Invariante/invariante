@@ -7,9 +7,9 @@ Uma das grandes novidades do Swift 2 foi o suporte para tratamento de erros (em 
 
 Mas o que isso quer dizer?
 
-Algumas operações (geralmente funções) não oferecem a garantia de completar sua execução ou mesmo de produzir um retorno útil. Em Swift, usamos *optionals* para representar uma ausência de valor (`nil`). Porém muitas vezes queremos entender o que causou o erro, para que nosso programa possa responder de acordo. É importante diferenciar as diversas formas que uma operação pode falhar e comunicar ao usuário adequadamente.
+Algumas operações (geralmente funções) não oferecem a garantia de completar sua execução ou mesmo de produzir um retorno útil. Em Swift, usamos *optionals* para representar uma ausência de valor (`nil`). Porém, quando uma função retorna `nil` pode ter acontecido um erro e, muitas vezes, queremos entender o que causou este erro, para que nosso programa possa responder de acordo. É importante diferenciar as diversas formas que uma operação pode falhar e comunicar ao usuário adequadamente.
 
-A forma mais comum de resolver o problema de tratamentos com Objective-C é passar uma variável adicional de erro no método e, caso haja algum erro, o método fica responsável por popular essa variável com o objeto de erro, além de retornal `nil`.
+A forma mais comum de resolver o problema de tratamentos de erros com Objective-C é passar uma variável adicional de erro no método e, caso haja algum erro, o método fica responsável por popular essa variável com o objeto de erro, além de retornar `nil`.
 
 Essa abordagem é confusa e não intuitiva. Esse é um exemplo comum em Objective-C:
 
