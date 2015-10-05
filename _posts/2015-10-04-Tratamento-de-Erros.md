@@ -34,7 +34,7 @@ Aqui, novamente, não existe relação entre os valores retornados na tupla e, p
 
 O Swift 2 resolve o problema introduzindo uma sintaxe adequada para o tratamento de erros. 
 
-Para os exemplos desse artigo, vamos criar uma camada de abstração sobre o [AddressBook](https://developer.apple.com/library/prerelease/ios/documentation/AddressBook/Reference/AddressBook_iPhoneOS_Framework/). Apesar de muitas das funcionalidades do AddressBook terem sido *deprecated* no iOS 9 (graças ao [Contacts Framwork](https://developer.apple.com/library/prerelease/ios/documentation/Contacts/Reference/Contacts_Framework/index.html#//apple_ref/doc/uid/TP40015328), ele ainda é importante para apps que suportam acesso aos contatos no iOS 8. A idéia dessa camada é, exatamente, facilitar a transição para o `Contacts Framework` no futuro, minimizando o impacto no nosso código.
+Para os exemplos desse artigo, vamos criar uma camada de abstração sobre o [AddressBook](https://developer.apple.com/library/prerelease/ios/documentation/AddressBook/Reference/AddressBook_iPhoneOS_Framework/). Apesar de muitas das funcionalidades do AddressBook terem sido *deprecated* no iOS 9 (graças ao [Contacts Framwork](https://developer.apple.com/library/prerelease/ios/documentation/Contacts/Reference/Contacts_Framework/index.html#//apple_ref/doc/uid/TP40015328)), ele ainda é importante para apps que suportam acesso aos contatos no iOS 8. A idéia dessa camada é, exatamente, facilitar a transição para o `Contacts Framework` no futuro, minimizando o impacto no nosso código.
 
 Primeiramente, vamos falar sobre o protocolo `ErrorType`. Ele é declarado na biblioteca padrão do Swift da seguinte forma:
 
