@@ -69,7 +69,7 @@ public struct AddressBookPermission {
 }
 {% endhighlight %}
 
-E, para representar nossos erros, vamos declarar o seguinte enum (dentro de uma extension de `AddressBookPermission`:
+E, para representar nossos erros, vamos declarar o seguinte enum (dentro de uma extension de `AddressBookPermission`):
 
 {% highlight swift linenos %}
 public extension AddressBookPermission {
@@ -80,7 +80,7 @@ public extension AddressBookPermission {
 }
 {% endhighlight %}
 
-Agora, vamos criar uma função no nosso `AddressBookPermission` onde recebemos um `CFData` contento o vCard a ser adicionado ao *Address Book* e retornamos um array de Strings com os IDs adicionados:
+Agora, vamos criar uma função no nosso `AddressBookPermission` onde recebemos um `CFData` contendo o vCard a ser adicionado ao *Address Book* e retornamos um array de Strings com os IDs adicionados:
 
 {% highlight swift linenos %}
 public func addContactsFromVcard(vCardData: CFData) -> [String] { ... }
@@ -88,7 +88,7 @@ public func addContactsFromVcard(vCardData: CFData) -> [String] { ... }
 
 Note que o retorno da nossa função **não** é um *optional*, ou seja, nós garantirmos que vamos retornar um Array de Strings (nem que ele seja vazio). Mas nossa função pode não conseguir completar a sua tarefa e se deparar com algum erro no seu caminho. Além disso, queremos determinar de forma clara a diferença entre retornar um Array vazio (ou seja, não havia nenhum contato no vCard) ou "retornar" um erro (ou seja, alguma coisa realmente deu errado).
 
-Para isso, vamos adicionar o *keyword* `throw` na nossa função. Como somos bons cidadãos, também vamos documentar (uso o [VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode) para isso):
+Para isso, vamos adicionar o *keyword* `throws` na nossa função. Como somos bons cidadãos, também vamos documentar (uso o [VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode) para isso):
 
 {% highlight swift linenos %}
 /**
@@ -112,7 +112,7 @@ Nota: como utilizamos a sintaxe do Swift para documentação, é assim que vemos
 
 A declaração da nossa função agora diz que ela retorna um Array de Strings, mas, **ao invés disso** ela pode terminar a execução no meio e jogar um  erro.
 
-Nesse caso, existem dois tipos de erros que nos interessa: ou o usuário não deu permissão para acessar o Address Book (.NotAuthorized) ou o contato não pode ser criado por qualquer outro motivo (falta de espaço em disco, dados corrompidos, etc: .ContactCouldNotBeCreated). Esse é o corpo da nossa função (não se assuste com as chamadas C-style da API do `ABAddressBook`):
+Nesse caso, existem dois tipos de erros que nos interessa: ou o usuário não deu permissão para acessar o Address Book (.NotAuthorized) ou o contato não pôde ser criado por qualquer outro motivo (falta de espaço em disco, dados corrompidos, etc: .ContactCouldNotBeCreated). Esse é o corpo da nossa função (não se assuste com as chamadas C-style da API do `ABAddressBook`):
 
 
 {% highlight swift linenos %}
@@ -289,7 +289,7 @@ Caso um erro seja lançado, o valor de `ids` será `nil`.
 
 ### Forçar "não-erro"
 
-Seja porque você tem certeza que uma função não vai lançar um erro ou seja por pura displicênia, você pode também usar a seguinte sintaxe para desabilitar completamente a propagação de erros. Note que, usando essa sintaxe, caso um erro seja lançado, você vai ter um erro de tempo de execução (e, claro, um crash):
+Seja porque você tem certeza que uma função não vai lançar um erro ou seja por pura displicência, você pode também usar a seguinte sintaxe para desabilitar completamente a propagação de erros. Note que, usando essa sintaxe, caso um erro seja lançado, você vai ter um erro de tempo de execução (e, claro, um crash):
 
 {% highlight swift linenos %}
 try! permission.addContactsFromVcard(vCardData)
