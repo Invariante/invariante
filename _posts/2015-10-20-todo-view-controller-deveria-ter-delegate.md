@@ -11,7 +11,7 @@ As `segues` facilitam a visualização do fluxo do *app* para uma pessoa que nã
 [self performSegueWithIdentifier:@"Segue" sender:result];
 {% endhighlight %}
 
-O que você acha desse trecho de código? Não me refiro a aquela bela *string* *mágica*, mas **onde** essa linha normalmente fica. Essa instrução está contida no `controller A` e é executada quando o mesmo terminou sua propósito e o `controller B` deve ser instanciado para continuar o fluxo.
+O que você acha desse trecho de código? Não me refiro a aquela bela *string* *mágica*, mas **onde** essa linha normalmente fica. Essa instrução está contida no `controller A` e é executada quando o mesmo terminou seu propósito e o `controller B` deve ser instanciado para continuar o fluxo.
 
 Isso implica que o `controller A` tem algum conhecimento do que deve acontecer depois dele, se eu quiser trocar o `controller B` por um `controller C` eu poderia manter o nome da `segue` e fazer a alteração somente no `storyboard` isso seria deselegante, mas não um problema. Agora imagine que  o *controller* a ser instanciado a seguir dependa de algum resultado anterior a `segue`, quem deve decidir qual `segue` deve ser chamada? Na grande maioria dos códigos que vi (talvez não sejam tantos assim) o próprio `controller A` é responsável por tomar essa decisão. Isso não me cheira bem (vulgo [code smell](https://en.wikipedia.org/wiki/Code_smell)), mas vamos continuar...
 
