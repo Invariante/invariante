@@ -156,7 +156,9 @@ Como eu disse anteriormente, eu ainda estou começando a utilizar essa abordagem
 
 ---
 
-*Update 2015/10/20:* O [Igor](https://twitter.com/icastanheda) levantou um ponto que eu não tinha pensado, é possível se livrar sem grande dificuldade do acoplamento no `prepareForSegue:sender:` usando uma subclasse da `UIStoryboardSegue`, fazendo o acoplamento do `controller A` com o `controller B` dentro dessa classe. Acho uma solução bem razoável.
+*Update 2015/10/20 13h:* O [Igor](https://twitter.com/icastanheda) levantou um ponto que eu não tinha pensado, é possível se livrar sem grande dificuldade do acoplamento no `prepareForSegue:sender:` usando uma subclasse da `UIStoryboardSegue`, fazendo o acoplamento do `controller A` com o `controller B` dentro dessa classe. Acho uma solução bem razoável.
+
+*Update 2015/10/20 23h:* O [Fabri](https://twitter.com/marcelofabri_) comentou que existem várias iniciativas como o [Natalie](https://github.com/krzyzanowskim/Natalie) para resolver o problema das *strings mágicas*, acho válido, mas preferia que houvesse alguma coisa nativa.
 
 ---
 
