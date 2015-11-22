@@ -17,5 +17,8 @@ author:
 
 paginate:         5
 
+# Plugins
+gems: [jekyll-paginate]
+
 github:
   repo:           https://github.com/appsterdambr/invariante
