@@ -176,7 +176,7 @@ private func getValeuIn<T>(collection: [UIControlState: T], forState state: UICo
 }
 {% endhighlight %}
 
-O único comentários pertinente seria mais uma vez ponto para o `Swift` com *generics* e *tuples* (já não sinto tanta falta do `;`).
+O único comentário pertinente seria mais uma vez ponto para o `Swift` com *generics* e *tuples* (já não sinto tanta falta do `;`).
 
 Para completar a atualização dos estado `.Disabled` é preciso fazer chamar `updateUI()` quando o `enabled` é chamado:
 
