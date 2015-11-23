@@ -7,7 +7,7 @@ O [`UIButton`](https://developer.apple.com/library/ios/documentation/UIKit/Refer
 
 > Porque alguém em sã consciência perderia tempo fazendo um botão?
 
-Eu acredito o objetivo didático seria justificativa suficiente, algo como o [Mike Ash](https://twitter.com/mikeash) faz com alguma frequência em seu [blog](https://mikeash.com/pyblog/), não é o caso. Por *simplicidade* vamos assumir que o problema não está na minha sanidade, mas em um desconforto ao customizar um botão.
+Eu acredito que o objetivo didático seria justificativa suficiente, algo como o [Mike Ash](https://twitter.com/mikeash) faz com alguma frequência em seu [blog](https://mikeash.com/pyblog/), mas não é o caso. Por *simplicidade* vamos assumir que o problema não está na minha sanidade, mas em um desconforto ao customizar um botão.
 
 Com frequência os botões são usados para iniciar requisições à servidores, no mundo real isso não é instantâneo e o usuário deve (ou deveria) ser *entretido* de alguma maneira enquanto a resposta dessa requisição não chega.
 
