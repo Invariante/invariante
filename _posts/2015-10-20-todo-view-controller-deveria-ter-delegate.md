@@ -13,7 +13,7 @@ As `segues` facilitam a visualização do fluxo do *app* para uma pessoa que nã
 
 O que você acha desse trecho de código? Não me refiro a aquela bela *string* *mágica*, mas **onde** essa linha normalmente fica. Essa instrução está contida no `controller A` e é executada quando o mesmo terminou seu propósito e o `controller B` deve ser instanciado para continuar o fluxo.
 
-Isso implica que o `controller A` tem algum conhecimento do que deve acontecer depois dele, se eu quiser trocar o `controller B` por um `controller C` eu poderia manter o nome da `segue` e fazer a alteração somente no `storyboard` isso seria deselegante, mas não um problema. Agora imagine que  o *controller* a ser instanciado a seguir dependa de algum resultado anterior a `segue`, quem deve decidir qual `segue` deve ser chamada? Na grande maioria dos códigos que vi (talvez não sejam tantos assim) o próprio `controller A` é responsável por tomar essa decisão. Isso não me cheira bem (vulgo [code smell](https://en.wikipedia.org/wiki/Code_smell)), mas vamos continuar...
+Isso implica que o `controller A` tem algum conhecimento do que deve acontecer depois dele, se eu quiser trocar o `controller B` por um `controller C` eu poderia manter o nome da `segue` e fazer a alteração somente no `storyboard`, isso seria deselegante mas não um problema. Agora imagine que  o *controller* a ser instanciado a seguir dependa de algum resultado anterior a `segue`, quem deve decidir qual `segue` deve ser chamada? Na grande maioria dos códigos que vi (talvez não sejam tantos assim) o próprio `controller A` é responsável por tomar essa decisão. Isso não me cheira bem (vulgo [code smell](https://en.wikipedia.org/wiki/Code_smell)), mas vamos continuar...
 
 Bom, em qualquer app, alguma hora, você vai precisar passar informação entre os *controllers* e como você faz isso?
 
@@ -159,6 +159,8 @@ Como eu disse anteriormente, eu ainda estou começando a utilizar essa abordagem
 *Update 2015/10/20 13h:* O [Igor](https://twitter.com/icastanheda) levantou um ponto que eu não tinha pensado, é possível se livrar sem grande dificuldade do acoplamento no `prepareForSegue:sender:` usando uma subclasse da `UIStoryboardSegue`, fazendo o acoplamento do `controller A` com o `controller B` dentro dessa classe. Acho uma solução bem razoável.
 
 *Update 2015/10/20 23h:* O [Fabri](https://twitter.com/marcelofabri_) comentou que existem várias iniciativas como o [Natalie](https://github.com/krzyzanowskim/Natalie) para resolver o problema das *strings mágicas*, acho válido, mas preferia que houvesse alguma coisa nativa.
+
+*Update 2014/11/22* O [Tales](https://twitter.com/talesp) apontou um ponto importante, nem sempre é possível usar um `delegate`. Por exemplo quando o *view controller* é subclasse de `UITableViewController`. Casos em que um `delegate` não é conveniente seria melhor usar propriedades que contém blocos que são chamados no lugar dos métodos do protocolo do `delegate`. Nada impede que as duas maneiras sejam implementadas.
 
 ---
 
