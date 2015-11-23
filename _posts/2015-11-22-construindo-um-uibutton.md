@@ -59,7 +59,7 @@ Vemos que os *insets* estão de fora, a parte de acessibilidade também vou deix
 ![UIButton label animation](/public/imgs/construindo-um-uibutton-01.gif)
 
 Note que nunca os dois textos aparecem ao mesmo tempo, o texto do estado `Normal` desaparece e depois o `Highlighted` aparece, mas porque esse tempo sem texto nenhum? 
-Nas minhas tentativas de animar a transição percebi que a diferença no tamanho do texto obrigua o um redimensionamento da *label*, e ai tudo vai para o brejo. Uma maneira de evitar é colocar esse tempo em "branco". Fuçando com o [Reveal](http://revealapp.com) descobri que o *label* do `UIButton` não é uma `UILabel` mas uma `UIButtonLabel`, uma classe que não é pública e deve resolver esses detalhes das animações ¯\\\_(ツ)_/¯. Uma outra complicação é que essa animação pode ser cancelada, ou alterada, antes de seu fim, dependendo do tempo de duração do toque. Acho que isso daria assunto para um artigo inteiro!
+Nas minhas tentativas de animar a transição percebi que a diferença no tamanho do texto obriga o redimensionamento da *label*, e ai tudo vai para o brejo. Uma maneira de evitar é colocar esse tempo em "branco". Fuçando com o [Reveal](http://revealapp.com) descobri que o *label* do `UIButton` não é uma `UILabel` mas uma `UIButtonLabel`, uma classe que não é pública e deve resolver esses detalhes das animações ¯\\\_(ツ)_/¯. Uma outra complicação é que essa animação pode ser cancelada, ou alterada, antes de seu fim, dependendo do tempo de duração do toque. Acho que isso daria assunto para um artigo inteiro!
 
 A hierarquia de *views* consiste de uma `UIImageView` que vai conter a `backgrondImage`, uma `contentView` que contém `UIImageView` e `UILabel` como mostra a imagem:
 
