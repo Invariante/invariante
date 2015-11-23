@@ -21,4 +21,4 @@ paginate:         5
 gems: [jekyll-paginate]
 
 github:
-  repo:           https://github.com/appsterdambr/invariante
+  repo:           https://github.com/Invariante/invariante
