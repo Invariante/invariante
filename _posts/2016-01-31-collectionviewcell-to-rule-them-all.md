@@ -33,10 +33,10 @@ class CollectionViewCell<View: UIView>: UICollectionViewCell {
 }
 {% endhighlight %}
 
-Nesse caso específico não vejo necessidade de usar `AutoLayout`. Aqui temos algo bem simples, na criação da célula uma instancia da `View` é criada adicionada à `contentView` de forma a ter sempre o seu tamanho.
+Nesse caso específico não vejo necessidade de usar `AutoLayout`. Aqui temos algo bem simples, na criação da célula uma instância da `View` é criada adicionada à `contentView` de forma a ter sempre o seu tamanho.
 Para customizar essa view em `collectionView(_: cellForItemAtIndexPath:)` seria apenas utilizar a referência a ela em `customView`.
 
-Mas se começarmos a pensar na linha do `MVVM` seria interessante que essa `view` aceitasse configuração via um `ViewModel`. Nesse caso teríamos um protocolo para typos que possuem um `model`:
+Mas se começarmos a pensar na linha do `MVVM` seria interessante que essa `view` aceitasse configuração via um `ViewModel`. Nesse caso teríamos um protocolo para tipos que possuem um `model`:
 
  
 {% highlight swift %}
