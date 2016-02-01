@@ -10,7 +10,7 @@ Feliz ano novo, feliz *post* novo!
 Um dia desses o caro [Vinicius](https://twitter.com/viniciusc70) estava [reclamando](https://twitter.com/viniciusc70/status/693172598981693441) da curva de aprendizado do [`UICollectionView`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/), para quem não conhece é uma `UITableViewController` com esteroides.  
 Você pode usar *layouts* customizados, transições de animações e muitas outras coisas que eu nem consigo imaginar. Por coincidência nesse mesmo dia eu estava implementando minha primeira `UICollectionView` em `Swift`. Nesse *post* não vou falar sobre essa classe mas de sobre suas células [`UICollectionViewCell`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionViewCell_class/index.html).
 
-No último mês venho *brigando* muito com [*generics*](https://github.com/apple/swift/blob/master/docs/Generics.rst) e consegui montar um exemplo interessante de uso aplicado à `UICollectionViewCell`. Esse classe não tem um *label* como a `UITableViewCell`, apenas uma `contentView`, isso dificulta exemplos mais simples pois implica que 100% você vai ter que customizar as células.
+No último mês venho *brigando* muito com [*generics*](https://github.com/apple/swift/blob/master/docs/Generics.rst) e consegui montar um exemplo interessante de uso aplicado à `UICollectionViewCell`. Esse classe não tem um *label* como a `UITableViewCell`, apenas uma `contentView`, isso dificulta exemplos mais simples pois implica que 100% da vezes você vai ter que customizar as células.
 
 A `UICollectionViewCell` precisa de uma ou mais `UIView` que vão ser adicionadas à `contentView` para essa customização. Então seria natural que eu uma célula genérica dependesse desse tipo:
 
@@ -80,7 +80,7 @@ class CollectionViewCell<View: UIView, ViewModel where View: HasModel, View.Mode
 
 Agora a coisa fica mais interessante, note a definição do *generics* `<View: UIView, ViewModel where View: HasModel, View.Model == ViewModel>`. Ele define um tipo `View` que é subclasse de `UIView` e um tipo `ViewModel`, o `where` aplica restrições a esse tipos, o `View` adota o `HasModel` e o tipo associado `Model` da `View` é o mesmo do `ViewModel`.
 
-Isso é suficiente para que qualquer `UIView` que adote o `HasModel` seja usada em uma *collection view*. Vamos supor que eu queira usar um *UILabel* para isso, com uma *extension* de poucas linhas isso está resolvido:
+Isso é suficiente para que qualquer `UIView` que adote o `HasModel` seja usada em uma *collection view*. Vamos supor que eu queira usar um `UILabel` para isso, uma *extension* de poucas linhas isso está resolvido:
 
 
 {% highlight swift %}
