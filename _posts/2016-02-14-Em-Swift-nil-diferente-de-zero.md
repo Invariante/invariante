@@ -7,11 +7,11 @@ title: Em Swift, nil é diferente de Zero
 
 Um uso comum seria quando é necessário testar se um *array* é  vazio:
 
-{% highlight objective-c %}
+~~~ objc
 if(array.count == 0) {
     NSLog(@"empty array");
 }
-{% endhighlight %}
+~~~
 
 Isso funciona porque o retorno de qualquer mensagem enviada para `nil` é `0`, `nil` ou `NULL` dependendo do tipo de retorno da mensagem, semanticamente diferentes mas tecnicamente iguais a `ZERO`. 
 
@@ -19,11 +19,11 @@ Então se `array` for `nil`, `array.count` retorna `0`, mais uma vitória do bem
 
 Sem pensar muito o podemos escrever o equivalente em `Swift`:
 
-{% highlight swift %}
+~~~ swift
 if array.count == 0 {
     print("empty array")
 }
-{% endhighlight %}
+~~~
 
 Se `array` for um opcional, novamente sem pensar muito, poderíamos fazer um *optional chaining* e só colocar um `?`:
 
