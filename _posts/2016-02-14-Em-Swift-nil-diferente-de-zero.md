@@ -72,6 +72,40 @@ if !(array?.count > 0) {
 
 Com certeza devem haver mais uma dezena de maneiras de escrever mas acho que já deu para ter uma idéia. Provavelmente o erro desse caso é transpor exatamente a mesma lógica do `Objective-C` para `Swift`.
 
+---
+
+*Update 2016/02/16* - O [Fabri](https://twitter.com/marcelofabri_) e o [Koga](https://twitter.com/brunokoga) lembraram que o `Array` adota o protocolo `CollectionType` e portanto o `isEmpty` seria mais adequado:
+
+~~~ swift
+if array?.isEmpty ?? true {
+    print("empty array")
+}
+~~~
+
+O Fabri pensou mais no assunto[^1] e propôs uma extensão para o `Optional` de `IntegerType` que evitaria o problema apresentado:
+
+~~~ swift
+extension Optional where Wrapped: IntegerType {
+    var valueOrZero: Wrapped {
+        return self ?? 0
+    }
+}
+~~~
+
+Assim o teste ficaria:
+
+~~~ swift
+if (array?.count).valueOrZero == 0 {
+    print("empty")
+}
+~~~
+
+Acho que a versão com o `isEmpty` ainda fica mais legível.
+
+[^1]: Assumindo que eu seja um cara teimoso e me recuse a usar o `isEmpty`
+
+---
+
 Criticas, sugestões e comentários são sempre bem vindos, é só me *pingar* no [@diogot](https://twitter.com/diogot) ou no [slack do iOS Dev BR](http://iosdevbr.herokuapp.com).
 
 ---
