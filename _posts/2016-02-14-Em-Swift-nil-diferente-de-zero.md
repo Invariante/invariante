@@ -100,7 +100,7 @@ if (array?.count).valueOrZero == 0 {
 }
 ~~~
 
-Acho que a versão com o `isEmpty` ainda fica mais legível.
+Um bom exercício para evitar o erro, mas acho que a versão com o `isEmpty` ainda fica mais legível.
 
 [^1]: Assumindo que eu seja um cara teimoso e me recuse a usar o `isEmpty`
 
