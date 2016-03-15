@@ -30,12 +30,12 @@ E, como em qualquer mundo, vamos definir as nossas duas funções de validação
 
 ~~~ swift
 func validateUsername(username: String) -> Bool {
-        return username.characters.count > 0
-    }
+    return username.characters.count > 0
+}
     
-    func validatePassword(password: String) -> Bool {
-        return password.characters.count > 0
-    }
+func validatePassword(password: String) -> Bool {
+    return password.characters.count > 0
+}
 ~~~
 
 E agora, vamos fazer nosso binding:
