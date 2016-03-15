@@ -57,7 +57,7 @@ Primeiramente, é importante saber que existe uma extensão do `RxSwift` chamada
 
 No código acima, fazemos um `map` em cima do `rx_text` (que nada mais é do que o _stream_ de strings do `UITextField`. Lembre-se: no `RxSwift` tudo são _streams_). E as funções que utilizamos para fazer o `map`, nada mais são do que as nossas funções de validação declaradas mais acima.
 
-Com isso, nossas variáveis `validUsername` e `validPassoword` são do tipo `Observable<Bool>` e não `Bool`, o que nos permite usar o operador `combineLatest`, que emitirá um _array_ com dois `Bool`, toda vez que um dos _streams_ `validUsername` **ou** `validPassword` emitirem um valor. E esses dois _streams_ por sua vez emitiram valores quando houver alguma mudança no `usernameTextField` e `passwordTextField` respectivamente.
+Com isso, nossas variáveis `validUsername` e `validPassoword` são do tipo `Observable<Bool>` e não `Bool`, o que nos permite usar o operador `combineLatest`, que emitirá um _array_ com dois `Bool`, toda vez que um dos _streams_ `validUsername` **ou** `validPassword` emitirem um valor. E esses dois _streams_ por sua vez irão emitir valores quando houver alguma mudança no `usernameTextField` e `passwordTextField` respectivamente.
 
 O nosso `combineLatest` nada mais faz do que um `&&` entre o primeiro e o último elemento do nosso array. Aqui usamos um _force unwrap_ (é, eu sei: dói até de ver) porque sabemos que nosso _array_ terá **sempre** dois elementos.
 
