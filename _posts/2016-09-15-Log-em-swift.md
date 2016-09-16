@@ -31,11 +31,11 @@ Em `Objective-C` eu tenho duas macros que escrevi faz muitos anos e funcionam mu
 
 O que eu gosto delas é que quando o programa roda em *debug*, além da mensagem são apresentados o nome do arquivo `__FILE__`, a linha `__LINE__` e o nome da função `__PRETTY_FUNCTION__` em que elas foram chamadas. Além disso em *release* uma delas não mostra nada.
 
-Note que essas são macros do pré-processador de C, isso significa que são avaliadas antes do código ser compilado e que seu comportamento depende da macro *DEBUG* estar definida. Quando criamos um projeto o Xcode já define ela para nós:
+Note que essas são macros do pré-processador de C, isso significa que são avaliadas antes do código ser compilado e que seu comportamento depende da macro *DEBUG* estar definida. Quando criamos um projeto o Xcode já define essa macro para nós:
 
 ![Xcode precompiler macros](/public/imgs/log-01.png)
 
-Então se você copiar elas para seu projeto tudo já vai estar funcionando!
+Então se você copia-las para seu projeto tudo já vai estar funcionando!
 
 Em `Swift` as coisas mudam um pouco, não temos macros do pré-processador. Mas o equivalente direto seriam funções globais, o que não tem muito cara de `Swift`. O que tenho usado[^1] é um `struct`  com duas funções estáticas:
 
@@ -101,7 +101,7 @@ Note que diferente da macro não é atribuido um valor e a *flag* é precedida d
 
 ---
 
-Criticas, sugestões e comentários são sempre bem vindos, é só me *pingar* no [@diogot](https://twitter.com/diogot) ou no [Slack do iOS Dev BR](http://iosdevbr.herokuapp.com).
+Criticas, sugestões e comentários são sempre bem-vindos, é só me *pingar* no [@diogot](https://twitter.com/diogot) ou no [Slack do iOS Dev BR](http://iosdevbr.herokuapp.com).
 
 ---
 Diogo Tridapalli <br />
