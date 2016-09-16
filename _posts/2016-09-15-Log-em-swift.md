@@ -9,9 +9,9 @@ Depois de quase 5 meses estamos de volta, 🖖.
 
 ---
 
-Todo mundo, uma hora ou outra, coloca uns `NSLog`s no código e muitas vezes esse log é útil apenas para o desenvolvimento ou *debug*. Então não é uma boa idéia usar direto o `NSLog` ou o `print` do `Swift`.
+Todo mundo, uma hora ou outra, coloca uns `NSLog`s no código. Muitas vezes esse log só é útil apenas para o desenvolvimento ou *debug*. Então pode não ser uma boa idéia usar direto o `NSLog` ou o `print` do `Swift`, pois esses log aparecem no console dos aparelhos.
 
-Em `Objective-C` eu tenho duas macros que escrevi faz muitos anos e funcionam muito bem:
+Em `Objective-C` eu tenho duas macros (que escrevi faz muitos anos) para resolver esse problema:
 
 ~~~ objc
 
@@ -29,7 +29,7 @@ Em `Objective-C` eu tenho duas macros que escrevi faz muitos anos e funcionam mu
 
 ~~~
 
-O que eu gosto delas é que quando o programa roda em *debug*, além da mensagem são apresentados o nome do arquivo `__FILE__`, a linha `__LINE__` e o nome da função `__PRETTY_FUNCTION__` em que elas foram chamadas. Além disso em *release* uma delas não mostra nada.
+Um adicional delas que eu gosto bastante é que quando o programa roda em *debug*, além da mensagem, são apresentados o nome do arquivo `__FILE__`, a linha `__LINE__` e o nome da função `__PRETTY_FUNCTION__` em que elas foram chamadas. Além disso em *release* uma delas não mostra nada.
 
 Note que essas são macros do pré-processador de C, isso significa que são avaliadas antes do código ser compilado e que seu comportamento depende da macro *DEBUG* estar definida. Quando criamos um projeto, o Xcode já define essa macro para nós:
 
